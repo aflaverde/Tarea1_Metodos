@@ -10,3 +10,7 @@ awk '{if($2<-30 || $3<-30 || $4<-30 || $5<-30 || $6<-30 || $7<-30 || $8<-30 || $
 awk '{print $7}' tempdata.txt > junio.txt
 ##g
 awk '{if($14>-15) print $1}' tempdata.txt
+
+
+#Python
+#gedit LaverdeAndres_temp.py &
