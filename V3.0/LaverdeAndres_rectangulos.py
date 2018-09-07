@@ -39,8 +39,8 @@ class rectangulo:
 	def dar_vertices(self):
 		print (self.punto1, self.punto2, self.punto3, self.punto4)
 
-rec1=rectangulo(6, 4, 2, 2)
-rec2=rectangulo(5, 4, 6, 4)
+rec1=rectangulo(3.0, 1.0, 2.0, 6.0)
+rec2=rectangulo(2.5,2.0, 3.0, 2.0)
 #rec1.dar_vertices()
 #rec2.dar_vertices()
 
@@ -108,16 +108,16 @@ def interseccion(r1, r2):
 		print ("Los rectangulos se intersectan formando un rectangulo de lados", l_interx,",",float(r1.ly))
 
 	############### POR ARRIBA O ABAJO ###############################
-	elif r1.x1<r2.x1 and r1.x4>r2.x4 and r1.y4>r2.y1 and r1.y4<r2.y4:#Arriba
+	elif r1.x1<=r2.x1 and r1.x4>=r2.x4 and r1.y4>r2.y1 and r1.y4<r2.y4:#Arriba
 		l_intery=r1.y4-r2.y1
 		print ("Los rectangulos se intersectan formando un rectangulo de lados", float(r2.lx),",",l_intery)
-	elif r2.x1<r1.x1 and r2.x4>r1.x4 and r2.y4>r1.y1 and r2.y4<r1.y4:#Arriba prima
+	elif r2.x1<=r1.x1 and r2.x4>=r1.x4 and r2.y4>r1.y1 and r2.y4<r1.y4:#Arriba prima
 		l_intery=r2.y4-r1.y1
 		print ("Los rectangulos se intersectan formando un rectangulo de lados", float(r1.lx),",",l_intery)
-	elif r1.x1<r2.x4 and r1.x4>r2.x4 and r1.y1<r2.y4 and r1.y1>r2.y1:#Abajo
+	elif r1.x1<=r2.x1 and r1.x4>=r2.x4 and r1.y1<r2.y4 and r1.y1>r2.y1:#Abajo
 		l_intery=r2.y4-r1.y1
 		print ("Los rectangulos se intersectan formando un rectangulo de lados", float(r2.lx),",",l_intery)
-	elif r2.x1<r1.x4 and r2.x4>r1.x4 and r2.y1<r1.y4 and r2.y1>r1.y1:#Abajo prima
+	elif r2.x1<=r1.x1 and r2.x4<=r1.x4 and r2.y1<r1.y4 and r2.y1>r1.y1:#Abajo prima
 		l_intery=r1.y4-r2.y1
 		print ("Los rectangulos se intersectan formando un rectangulo de lados", float(r1.lx),",",l_intery)
 
